@@ -1,4 +1,5 @@
 //ex 1
+
 const tripleItem = (item, value) => {
   let result = []
   for(let i = 0; i< value; i++) {
@@ -6,7 +7,9 @@ const tripleItem = (item, value) => {
   }
   return result
 }
+
 //ex 2
+
 const converseArray = (arr) => {
   let tempArr = []
   for ( let i = arr.length - 1; i >= 0; i-- ) {
@@ -19,11 +22,13 @@ const converseArray = (arr) => {
 //x4
 
 //ex5
+
 const sortArray = (arr) => {
   return arr.sort ( function (a,b) {
     return a-b
   })
 }
+
 //ex6 
 const checkIsObject = (input) => {
   console.log(typeof input)
@@ -32,6 +37,7 @@ const checkIsObject = (input) => {
   } else {return false}
 }
 //ex8 
+
 const removeItem = (arr) => {
   if(arr.length < 5) {
     console.log('array have to more than 5 items, please')
@@ -40,7 +46,9 @@ const removeItem = (arr) => {
   return arr
   }
 }
+
 //ex 9
+
 const students = [
   { id: 1, name: 'Nguyễn Thị Tèo', score: 9.2 },
   { id: 2, name: 'Phạm Văn Bưởi', score: 2.3 },
@@ -52,23 +60,24 @@ const students = [
 ]
 
 const result = (student) => {
-let  tempArr = []
-for(let i = 0 ; i < student.length - 1; i++ ) {
-  let nameArray = student[i].name.split(" ") 
-  const haveDuy = (element) => element == 'Duy'
-  console.log(nameArray.some(haveDuy))
-  if(nameArray[1]== 'Duy') {
-    tempArr.push('fail')
-  }
-  if(student[i].score < 5 ) {
-    tempArr.push('fail')
-  } else {
-    tempArr.push('pass')
+  let  tempArr = []
+  for(let i = 0 ; i < student.length - 1; i++ ) {
+    let nameArray = student[i].name.split(" ") 
+    const haveDuy = (element) => element == 'Duy'
+    console.log(nameArray.some(haveDuy))
+    if(nameArray[1]== 'Duy') {
+      tempArr.push('fail')
+    }
+    if(student[i].score < 5 ) {
+      tempArr.push('fail')
+    } else {
+      tempArr.push('pass')
     }
   }
   return tempArr
 }
-//ex10
+// ex10
+
 const getResult = (student) => {
   let result = []
   let tempArr = student.map(function(a) {
